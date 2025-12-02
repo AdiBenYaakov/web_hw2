@@ -14,7 +14,7 @@
 
 ניתן לצפות באתר המלא בקישור הבא:
 
-👉 [לחיצה כאן לפתיחת האתר](https://adibenyaakov.github.io/web_hw2/)
+ [לחיצה כאן לפתיחת האתר](https://adibenyaakov.github.io/web_hw2/)
 
 בדף הבית (`index.html`) ניתן לעבור ל־4 הדפים שנוצרו ולראות את תצוגת הפריסה.
 
