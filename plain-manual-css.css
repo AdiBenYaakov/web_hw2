@@ -143,12 +143,20 @@ body {
 @media (max-width: 750px) {
 
   .left-big {
-    position: static;      /* לא absolute יותר */
+    position: static;      /* לא absolute */
     width: 100%;
-    border-right: none;    /* אין עמודה שמאלית נפרדת */
-    border-bottom: 2px solid red;  /* אם בא לך שתישאר מסגרת */
+    height: auto;
+    top: auto;
+    bottom: auto;
+    border-right: none;    /* לא חובה, רק כדי שלא יהיה קו באמצע */
+    border-bottom: 2px solid red;  /* אם בא לך קו מתחת */
+    margin-bottom: 10px;   /* רווח מתחת */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
+  /* החלק הימני כבר לא צריך מקום משמאל */
   .right-wrapper {
     margin-left: 0;
     width: 100%;
