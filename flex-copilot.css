@@ -1,0 +1,89 @@
+/* Flexbox 12-column grid using same class names as float version */
+/* Flexbox layout (semantic classes) */
+* { box-sizing: border-box; }
+
+/* Main layout (also support plain-copilot's class name `main-container`) */
+.main-layout, .main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 2px solid red;
+  padding: 0; /* must be flush per requirement */
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Sidebar (left) - also style .col-2 to keep plain-copilot classes compatible */
+.sidebar, .col-2 {
+  width: 16.666667%; /* ~col-2 */
+  padding: 0; /* flush */
+}
+.sidebar .box, .col-2 .inner-box {
+  border: 2px solid red;
+  height: 490px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+/* Content area (right) - also apply to .col-10 from plain-copilot */
+.content-area, .col-10 {
+  width: 83.333333%; /* ~col-10 */
+  padding: 5px; /* spacing from edges */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* separate rows */
+}
+
+/* Generic box style used inside rows (also support plain `inner-box`) */
+.box, .inner-box {
+  border: 2px solid red;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+/* Top row: 4 equal boxes */
+/* Rows: keep plain `row` utility and specific `top-row`/`row1` behavior */
+.row, .top-row { display: flex; gap: 10px; }
+.top-row .item { flex: 1 1 0; }
+/* Support plain class: row1 .col-3 .inner-box should be 100px */
+.top-row .item, .row1 .col-3 .inner-box { height: 100px; }
+
+/* Middle row: two halves */
+.middle-row, .row2 { display: flex; gap: 10px; }
+.middle-row .left-half, .row2 .col-6:first-child { 
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.middle-row .left-half .small, .row2 .col-6:first-child .col-12 .inner-box { height: 100px; }
+.middle-row .right-half, .row2 .col-6:last-child { flex: 1 1 50%; }
+.middle-row .right-half .large, .row2 .col-6:last-child .inner-box { height: 210px; }
+
+/* Bottom row: 75% / 25% split */
+.bottom-row, .row3 { display: flex; gap: 10px; }
+.bottom-row .wide, .row3 .col-9 .inner-box { flex: 0 0 75%; height: 150px; }
+.bottom-row .narrow, .row3 .col-3 .inner-box { flex: 0 0 25%; height: 150px; }
+
+/* Utility: flush class keeps element touching container edge */
+.flush { padding: 0 !important; margin: 0 !important; }
+
+/* Responsive behavior */
+@media (max-width: 750px) {
+  .main-layout { flex-direction: column; }
+
+  /* Sidebar becomes thin top strip */
+  .sidebar { width: 100%; }
+  .sidebar .box { height: 4px; }
+
+  .content-area { width: 100%; padding: 5px; gap: 10px; }
+
+  /* Rows stack vertically and inner boxes are full width */
+  .top-row, .middle-row, .bottom-row { flex-direction: column; }
+  .top-row .item, .middle-row .left-half .small, .middle-row .right-half .large,
+  .bottom-row .wide, .bottom-row .narrow { width: 100%; flex: 0 0 auto; }
+}
