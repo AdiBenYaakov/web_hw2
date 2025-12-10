@@ -5,9 +5,9 @@
 
 /* --- Main container --- */
 .main-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  border: 2px solid red;
+  max-width: 100%;
+  margin: 0;
+  border: 3px solid red;
   overflow: hidden;
   padding: 0; /* per requirement */
   position: relative;

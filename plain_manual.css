@@ -44,14 +44,14 @@
 
 
  
-    .main-container {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        border: 3px solid red;
-        overflow: hidden;
-        padding: 0; 
-    }
+.main-container {
+    width: 100%;        
+    max-width: 100%;   
+    margin: 0;         
+    border: 3px solid red;
+    overflow: hidden;
+    padding: 0; 
+}
 
 
     .wrapper-reset { 
@@ -76,6 +76,5 @@
                 height: 4px; 
             }
             
-
 
         }       

@@ -4,7 +4,7 @@
 
 /* Main layout (also support plain-copilot's class name `main-container`) */
 .main-layout, .main-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   border: 2px solid red;
   padding: 0; /* must be flush per requirement */
