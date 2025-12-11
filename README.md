@@ -1,11 +1,11 @@
 #  HW2 –עדי בן יעקב וקוסטה זוייב
 
-ריפו זה כולל את הפתרון לתרגיל פריסת הדף בקורס Web.
+ריפו זה כולל את הפתרון למטלה 2 בקורס Web.
 
 ## קבצים עיקריים
 
 - `index.html` – דף הבית של התרגיל, מכיל קישורים לכל שאר הדפים.
-- `plain-manual.html` – דף CSS Plain שנבנה ידנית.
+- `plain_manual.html` – דף CSS Plain שנבנה ידנית.
 - `plain-copilot.html` – דף CSS Plain שנוצר בעזרת GitHub Copilot.
 - `flex-copilot.html` – דף Flex שנוצר בעזרת GitHub Copilot.
 - `bootstrap-copilot.html` – דף Bootstrap שנוצר בעזרת GitHub Copilot.
