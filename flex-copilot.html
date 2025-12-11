@@ -3,46 +3,49 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Flexbox Layout - flex-copilot</title>
+    <title>flex copilot</title>
     <link rel="stylesheet" href="flex-copilot.css">
   </head>
   <body>
 
-    <div class="main-layout main-container">
+    <div class="main-container">
       <!-- Sidebar (flush) -->
-      <aside class="sidebar flush col-2">
-        <div class="box inner-box"></div>
-      </aside>
+      <div class="col-2 flush">
+        <div class="inner-box"></div>
+      </div>
 
       <!-- Content area -->
-      <section class="content-area col-10 no-pad">
+      <div class="col-10 no-pad">
 
         <!-- Top Row: four equal boxes -->
-        <div class="top-row row row1">
-          <div class="box item col-3 inner-box"></div>
-          <div class="box item col-3 inner-box"></div>
-          <div class="box item col-3 inner-box"></div>
-          <div class="box item col-3 inner-box"></div>
+        <div class="row row1">
+          <div class="col-3"><div class="inner-box"></div></div>
+          <div class="col-3"><div class="inner-box"></div></div>
+          <div class="col-3"><div class="inner-box"></div></div>
+          <div class="col-3"><div class="inner-box"></div></div>
         </div>
 
         <!-- Middle Row: left half two stacked boxes, right half one big box -->
-        <div class="middle-row row row2">
-          <div class="left-half col-6">
-            <div class="box small col-12 inner-box"></div>
-            <div class="box small col-12 inner-box"></div>
+        <div class="row row2">
+          <div class="col-6">
+            <div class="row">
+              <div class="col-12"><div class="inner-box"></div></div>
+              <div class="col-12"><div class="inner-box"></div></div>
+            </div>
           </div>
-          <div class="right-half col-6">
-            <div class="box large col-12 inner-box"></div>
+          <div class="col-6">
+            <div class="col-12"><div class="inner-box"></div></div>
           </div>
         </div>
 
         <!-- Bottom Row: wide 75% and narrow 25% -->
-        <div class="bottom-row row row3">
-          <div class="wide box col-9 inner-box"></div>
-          <div class="narrow box col-3 inner-box"></div>
+        <div class="row row3">
+          <div class="col-9"><div class="inner-box"></div></div>
+          <div class="col-3"><div class="inner-box"></div></div>
         </div>
 
-      </section>
+      </div>
+
     </div>
 
   </body>
